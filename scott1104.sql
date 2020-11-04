@@ -1,0 +1,4 @@
+SELECT
+    tab.*
+FROM
+    tab
