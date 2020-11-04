@@ -57,4 +57,39 @@ select * FROM emp where deptno = 30 or job ='CLERK';
 --부서번호가 20이거나 사원직책이 SALESMAN정보조회
 select * FROM emp where deptno = 20 or job ='SALESMAN';
 
+--연산자를 이용한 조회
+
+--산술 연산자 :sal*12 한 금액이 36000 인데이터 조회
+select * from emp where sal*12 =36000;
+
+--관계연산자 : >,<,>=,<=
+select * from emp where sal > 3000;
+select * from emp where sal >= 3000;
+
+select *from emp where ename >= 'F';
+
+--논리연산자 : and,or
+--급여가 2500이상이고,직업이 analyst인 사원정보 조회
+
+select * from emp where sal >= 2500 and job = 'ANALYST';
+
+select * from emp where job = 'MANAGER' or job = 'SALESMAN' or job = 'CLERK';
+
+--등가연산자 : 양쪽 항목이 같은지 검사
+
+select * from emp where sal != 3000;
+select * from emp where sal <> 3000;
+select * from emp where sal ^= 3000;
+
+--in 연산자
+select * from emp where job in ('MANAGER' ,'SALESMAN','CLERK');
+select * from emp where job = 'MANAGER' or job = 'SALESMAN' or job = 'CLERK';
+
+select * from emp where job != 'MANAGER' and job != 'SALESMAN' and job != 'CLERK';
+select * from emp where job not in('MANAGER' ,'SALESMAN','CLERK');
+
+select * from emp where deptno in(10,20);
+
+
+ 
 
