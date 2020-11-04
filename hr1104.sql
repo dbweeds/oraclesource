@@ -25,3 +25,6 @@ select LAST_NAME,HIRE_DATE,EMPLOYEE_ID FROM employees where HIRE_DATE >= '08/02/
 
 select LAST_NAME,HIRE_DATE FROM employees where HIRE_DATE >= '04/01/01' and HIRE_DATE < '05/01/01' order by HIRE_DATE;
 
+
+select LAST_NAME,HIRE_DATE FROM employees where HIRE_DATE >= '04/01/01' and HIRE_DATE < '05/01/01' order by HIRE_DATE;
+
