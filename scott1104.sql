@@ -283,3 +283,44 @@ select sal, to_char(sal,'$999,999') as sal_$,
  to_char(sal,'999,999,00') as sal_4
  from emp;
 
+select to_date('2020-11-05','yyyy/mm/dd') as todate1,
+       to_date('20201105','yyyy-mm-dd') as todate2 from dual;
+       
+-- 1981년 6월1일 이후에 입사한 사원정보 조회
+select * 
+from emp 
+where hiredate > to_date('19810601','yyyy-mm-dd');
+
+select to_date('2019-12-20')-to_date('2019-10-20') from dual;
+
+--널처리함수 :nvl,nvl2
+select empno, ename,sal, comm, sal+comm from emp;
+
+
+select empno, ename,sal, comm, sal+comm,nvl(comm,0),sal+nvl(comm,0)
+from emp;
+
+select empno, ename,sal, comm, sal+comm,nvl2(comm,'o','x'),
+sal+nvl2(comm,sal*12+comm,sal*12) as ammsal
+from emp;
+
+--decode함수와 case문
+--job이  manager, salesman, analyst 경우에 각각의 다른 비율을 적용하고 싶다면?
+select empno, ename,job,sal,decode(job,'MANAGER',sal*1.1,
+                                        'SALESMAN',sal*1.05,
+                                        'ANLYST',sal,
+                                         sal*1.03) 
+as upsal from emp;
+
+select empno, ename,job,sal,case job
+                            when 'MANAGER' then sal*1.1
+                            when'SALESMAN' then sal*1.05
+                            when'ANLYST' then sal
+                            else sal*1.03 end
+as upsal from emp;
+
+select empno, ename,job,sal,case
+                            when comm is null then '해당사항없음'
+                            when comm=0 then '수당없음'
+                            when comm>0 then '수당 : '|| comm
+                            end as comm_text from emp;
