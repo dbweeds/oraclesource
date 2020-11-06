@@ -139,5 +139,41 @@ select job_id,count(employee_id)
 from employees 
 group by job_id;
 
+--join 실습
+select * from locations;
+--자신의 담당 매니저의 고용일보다 빠른 입사자를 찾아hire_date, last_name,manager_id 를 출력하시오
+--(employees selef join) 37행
+select e2.hire_date, e2.last_name,e2.manager_id
+from employees e1 inner join employees e2
+on e1.manager_id = e2.employee_id 
+and e1.hire_date<e2.hire_date;
+--도시 이름이 t로 시작하는 지역에 사는 사원들의 사번,last_name,부서번호 조회
+--employees의 department_id 와 departments의 department_id 연결후
+--departments의 location_id와 locations의 location_id조인 2행
+select e.employee_id ,e.last_name,e.department_id
+from employees e inner join departments d 
+on e.department_id = d.department_id
+inner join locations l
+on d.location_id = l.location_id and l.city like'T%';
 
-                        
+select * from departments;
+--위치 id가 1700인 동일한 사원들의 employee_id,last_name,department_id,salary 조회
+--employees 와 departments조인  18행
+select e.employee_id ,e.last_name,e.department_id, e.salary ,d.location_id
+from employees e inner join departments d
+on e.department_id = d.department_id and
+d.location_id = 1700;
+
+--department_name, location_id, 각 부서별 사원수, 각 부서별 평균 연봉 조회
+--employees, department 조인 11행
+select department_name, location_id ,count()
+
+--executive 부서에 근무하는 모든사원들의 department_id, last_name, job_id 조회
+--employees, department 조인 
+
+--기존의 직업을 여전히 가지고 있는 사원들의 사번 및 job_id 조회
+--employees,job_history 조인
+
+--각 사원별 소속 부서에서 자신보다 늦게 고용되었으나 보다 많은 연봉을 받는 
+--사원이 존재하는 모든 사원들의 last_name을 조회
+  
