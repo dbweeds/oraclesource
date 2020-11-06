@@ -94,3 +94,48 @@ where job_id in('AD_PRES','PU_CLERK');
 select employee_id , concat(first_name,concat(' ',last_name)),department_id, job_id
 from employees
 where job_id in('AD_PRES','PU_CLERK');
+
+select last_name,salary,case
+                        when salary<2000 then 0.0
+                        when salary<4000 then 0.09
+                        when salary<6000 then 0.2
+                        when salary<8000 then 0.3
+                        when salary<10000 then 0.4
+                        when salary<12000 then 0.42
+                        when salary<14000 then 0.44
+                        else 0.45 end as TAX_RATE from employees
+                        where department_id = 80;
+                        
+select last_name,salary,decode(trunc(salary/2000,0),
+                        0,0.00,
+                        1,0.09,
+                        2,0.20,
+                        3,0.30,
+                        4,0.40,
+                        5,0.42,
+                        6,0.44,
+                        0.45) as tax_rate
+from employees where department_id = 80;            
+
+--다중행함수
+--회사내의 최대 연봉및 최소 연봉차이를 조회
+select max(salary)-min(salary) from employees;
+--매니저로 근무하는 사원들의 인원수 조회
+select count(distinct manager_id) as 매니저 from employees;
+
+--부서별 직원의 수를 구하고 부서번호의 오름차순으로 출력
+select department_id,count(*) 
+from employees 
+group by department_id 
+order by department_id;
+--부서별 급여의 평균 연봉을 출력하고,평균연봉은 정수만 나오도록 한다.
+--부서변호별 오름차순으로 정렬
+select department_id,round(avg(salary),0)
+from employees 
+group by department_id 
+order by department_id;
+--동일한 직업을 가진 사원수를 조회
+select job_id,count(employee_id) 
+from employees 
+group by job_id;
+                        

@@ -324,3 +324,28 @@ select empno, ename,job,sal,case
                             when comm=0 then '수당없음'
                             when comm>0 then '수당 : '|| comm
                             end as comm_text from emp;
+
+select empno, ename,sal,round(sal/21.5,2) as DAY_PAY,trunc(sal/21.5/8,1) as TIME_DAY
+from emp;
+
+select empno, ename, hiredate, 
+       next_day(add_months(hiredate,3),'월요일') as R_JOB,nvl(to_char(comm),'N/A')
+from emp;
+
+select empno,ename,mgr, case
+                        when mgr is null then '0000'
+                        when mgr like '75%' then '5555'
+                        when mgr like '76%' then '6666'
+                        when mgr like '77%' then '7777'
+                        when mgr like '78%' then '8888'
+                        else to_char(mgr) end as CHG_MGR from emp;
+select empno,ename,mgr,
+       decode(substr(to_char(mgr),1,2),
+            null,'0000',
+            '75','5555',
+            '76','6666',
+            '77','7777',
+            '78','8888',
+            to_char(mgr)) as chg_mgr
+from emp;
+                       
