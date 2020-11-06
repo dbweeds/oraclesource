@@ -35,6 +35,29 @@ select deptno,avg(comm) from emp group by deptno;
 select deptno, avg(sal),job from emp group by deptno,job order by deptno,job;
 
 --group by절에 포함 안되는 열을 select에 포함하면 안됨
-select ename,deptno,avg(sal)
+/*select ename,deptno,avg(sal)
 from emp
 GROUP BY deptno;
+*/
+
+--having : group by 정에 조건을 줄때 사용
+--각 부서의 직책별 평균 급여을 구하되 그평균 급여가 2000 이상인 그룹만
+--출력
+--where절에 그룹함수가 들어올수없음
+select deptno,job,avg(sal) from emp 
+group by deptno,job 
+having avg(sal)>2000
+order by deptno,job;
+
+--emp테이블의 부서별 직책의 평균 급여가 500이상인 사원들의ㅏ
+--부서번호,직책,부서별 직팩의 평균 급여 출력
+select deptno,job,avg(sal)
+from emp
+group by deptno,job having avg(sal) >=500;
+
+--실행순서 from >select >where >group
+select deptno,job,avg(sal)
+from emp
+where sal<=3000
+group by deptno,job having avg(sal) >=500
+order by deptno,job;

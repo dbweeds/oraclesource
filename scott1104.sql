@@ -348,4 +348,18 @@ select empno,ename,mgr,
             '78','8888',
             to_char(mgr)) as chg_mgr
 from emp;
-                       
+                   
+select deptno,floor(avg(sal)) as avg_sal,
+max(sal) as max_sal,min(sal) as min_sal,count(*)
+from emp
+group by deptno;
+
+select job,count(*)
+from emp
+group by job
+having count(*)>=3;
+
+select to_char(hiredate,'yyyy'), deptno,count(*)
+from emp
+group by to_char(hiredate,'yyyy'),deptno
+order by to_char(hiredate,'yyyy')desc;
