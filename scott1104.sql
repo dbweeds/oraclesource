@@ -13,6 +13,7 @@ select ename, job, sal from emp;
 
 --중복 레코드 제거한 후 조회 : distinct
 select distinct deptno from emp;
+select deptno from emp;
 
 --alais (별칭) : as (원본문을 바꾸지않고 보여줄때만 바뀜)
 select empno as 사원번호 from emp;
