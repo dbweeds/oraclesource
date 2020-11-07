@@ -166,14 +166,33 @@ d.location_id = 1700;
 
 --department_name, location_id, 각 부서별 사원수, 각 부서별 평균 연봉 조회
 --employees, department 조인 11행
-select department_name, location_id ,count()
+select department_name, location_id ,count(*),floor(avg(salary))
+from employees e inner join departments d
+on e.department_id = d.department_id
+group by department_name, location_id;
 
+select * from employees;
+select * from departments;
 --executive 부서에 근무하는 모든사원들의 department_id, last_name, job_id 조회
 --employees, department 조인 
+select e.department_id, e.last_name, e.job_id
+FROM employees e inner join departments d
+on e.department_id = d.department_id
+and d.department_name = 'Executive';
 
+select * from employees;
+select * from job_history;
 --기존의 직업을 여전히 가지고 있는 사원들의 사번 및 job_id 조회
 --employees,job_history 조인
+select e.employee_id, e.job_id
+from employees e inner join job_history j
+on e.employee_id = j.employee_id
+and e.job_id = j.job_id;
 
 --각 사원별 소속 부서에서 자신보다 늦게 고용되었으나 보다 많은 연봉을 받는 
 --사원이 존재하는 모든 사원들의 last_name을 조회
-  
+select distinct e1.last_name
+from employees e1 , employees e2
+where e1.department_id = e2.department_id
+and e1.hire_date > e2.hire_date
+and e1.salary >e2.salary;
