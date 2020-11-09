@@ -143,7 +143,7 @@ group by job_id;
 select * from locations;
 --자신의 담당 매니저의 고용일보다 빠른 입사자를 찾아hire_date, last_name,manager_id 를 출력하시오
 --(employees selef join) 37행
-select e2.hire_date, e2.last_name,e2.manager_id
+select e1.hire_date, e1.last_name,e1.manager_id, e2.employee_id,e2.hire_date
 from employees e1 inner join employees e2
 on e1.manager_id = e2.employee_id 
 and e1.hire_date<e2.hire_date;
@@ -191,8 +191,32 @@ and e.job_id = j.job_id;
 
 --각 사원별 소속 부서에서 자신보다 늦게 고용되었으나 보다 많은 연봉을 받는 
 --사원이 존재하는 모든 사원들의 last_name을 조회
-select distinct e1.last_name
+select distinct e1.first_name || ' ' || e1.last_name
 from employees e1 , employees e2
 where e1.department_id = e2.department_id
-and e1.hire_date > e2.hire_date
-and e1.salary >e2.salary;
+and e1.hire_date < e2.hire_date
+and e1.salary < e2.salary;
+
+--서브쿼리 실습
+select * from employees;
+--회사전체평균연봉보다 더많이 받는 사원들의 last_name, salary 조회
+select last_name, salary
+from employees
+where salary > (select avg(salary) from employees);
+--last_name 에 u가 포함되는 사원들과 동일 부서에 근무하는 사원들의 employee_id, last_name
+select employee_id ,last_name
+from employees
+where department_id in (select distinct department_id from employees where last_name like '%u%' );
+--not exists 연산자를 사용하여 매니저가 아닌 사원 이름을 조회
+select first_name||' '|| last_name
+from employees e1
+where not exists(select distinct manager_id
+                 from employees e2
+                 where e1.employee_id = e2.manager_id );
+                 
+ select first_name||' '|| last_name
+from employees e1
+where e1.employee_id not in (select distinct manager_id
+                 from employees e2
+                 where e1.employee_id = e2.manager_id );   
+
