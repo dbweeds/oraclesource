@@ -220,3 +220,17 @@ where e1.employee_id not in (select distinct manager_id
                  from employees e2
                  where e1.employee_id = e2.manager_id );   
 
+
+-- 인덱스 확인
+create table indextbl as select distinct first_name, last_name, hire_date from employees;
+
+select * from indextbl where first_name = 'Jack';
+--데이터베이스에서 검색의 향상 때문에index사용
+--인덱스 사용 여부에 따라 테이블 검색 방식을
+--table full scan, index scan 으로 구분
+
+--인덱스 생성
+create index idx_indextbl_firstname on indextbl(first_name);
+
+--인덱스 삭제
+drop index idx_indextbl_firstname;
