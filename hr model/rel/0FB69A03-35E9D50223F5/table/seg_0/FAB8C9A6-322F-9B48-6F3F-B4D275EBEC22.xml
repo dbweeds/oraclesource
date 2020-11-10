@@ -1,0 +1,224 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FAB8C9A6-322F-9B48-6F3F-B4D275EBEC22" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="JOB_HISTORY">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_HISTORY</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Table that stores job history of the employees. If an employee
+changes departments within the job or changes jobs within the department,
+new rows get inserted into this table with old job information of the
+employee. Contains a complex primary key: employee_id+start_date.
+Contains 25 rows. References with jobs, employees, and departments tables.]]></commentInRDBMS>
+<ownerDesignName>hr model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="D967203A-E7D1-EBFC-3ABF-1F5B73A31955">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column in the complex primary key employee_id+start_date.
+Foreign key to employee_id column of the employee table]]></commentInRDBMS>
+<ownerDesignName>hr model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_EMPLOYEE_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="52715768-DC54-1FD3-AD59-3FA1CBEEFD61" referredColumn="86CE077D-C27B-DED7-DFD8-4B7E97E11A1E"/>
+</associations>
+</Column>
+<Column name="START_DATE" id="986E29A3-6471-60CD-DFB0-639B0246CB64">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>START_DATE</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column in the complex primary key employee_id+start_date.
+Must be less than the end_date of the job_history table. (enforced by
+constraint jhist_date_interval)]]></commentInRDBMS>
+<ownerDesignName>hr model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_START_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="END_DATE" id="6D27336B-5439-3CA2-8341-D2C29B146A85">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>END_DATE</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last day of the employee in this job role. A not null column. Must be
+greater than the start_date of the job_history table.
+(enforced by constraint jhist_date_interval)]]></commentInRDBMS>
+<ownerDesignName>hr model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_END_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="CC0274B4-5C07-4CF8-F537-768ACB54596E">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Job role in which the employee worked in the past; foreign key to
+job_id column in the jobs table. A not null column.]]></commentInRDBMS>
+<ownerDesignName>hr model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="86550004-A662-982E-A303-7CAFA7D1944A" referredColumn="59FA511A-042B-4B47-8F03-9413299B1B6B"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="F455F95A-3CEE-77ED-5028-FD3D4F7AC371">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Department id in which the employee worked in the past; foreign key to deparment_id column in the departments table]]></commentInRDBMS>
+<ownerDesignName>hr model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11446052-F262-10A5-A1D3-169F29211DBC" referredColumn="9DA27302-63B9-2FAB-F119-2DFE66A5198E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C44BFFE-612D-80C1-650E-898CDA636957" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D967203A-E7D1-EBFC-3ABF-1F5B73A31955"/>
+<colUsage columnID="986E29A3-6471-60CD-DFB0-639B0246CB64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27EEF4C2-0700-CA3A-7E3E-CFEAAC5EEEF0" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="JHIST_DEPARTMENT_IX">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_DEPARTMENT_IX</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F455F95A-3CEE-77ED-5028-FD3D4F7AC371"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="618BC8EA-9A56-EAF7-B001-C401228B20E3" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="JHIST_EMPLOYEE_IX">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMPLOYEE_IX</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D967203A-E7D1-EBFC-3ABF-1F5B73A31955"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D745D21-666E-2275-5B12-25AE0D81E4D3" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D967203A-E7D1-EBFC-3ABF-1F5B73A31955"/>
+<colUsage columnID="986E29A3-6471-60CD-DFB0-639B0246CB64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="581877AB-3359-6383-8EBB-2E81D774816F" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="JHIST_JOB_IX">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_JOB_IX</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC0274B4-5C07-4CF8-F537-768ACB54596E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B07F444E-1D97-66A2-7856-16478705A637" name="JHIST_DEPT_FK">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F455F95A-3CEE-77ED-5028-FD3D4F7AC371"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BAE63F95-374F-1C84-0CF4-0D485DB220FF" name="JHIST_EMP_FK">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D967203A-E7D1-EBFC-3ABF-1F5B73A31955"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01A51C78-C455-309B-51E1-FB38F370381C" name="JHIST_JOB_FK">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC0274B4-5C07-4CF8-F537-768ACB54596E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="JHIST_DATE_INTERVAL" directorySegmentName="seg_0" id="B03FB5F6-1890-1C70-4ECA-EAD50C03B2E1">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_DATE_INTERVAL</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<rule><![CDATA[end_date > start_date]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

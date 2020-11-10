@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGIONS" directorySegmentName="seg_0" id="9320A76A-4274-E6D0-A485-4657F7D41E20">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>19355536-496C-62BD-70D6-F6371C8BC423</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="REGION_NAME" id="479FB8AE-68D0-6960-FA54-38005B92BF48">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGION_ID" id="A5791B23-A6C7-B6B1-35E2-9D2BA775F26D">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REG_ID_PK" id="1BCC147D-736B-BD43-9B9C-EF05525C5C75">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REG_ID_PK" id="DB287C00-4ABD-E9E6-FE28-F14935D2B086">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+<existingIndex>1BCC147D-736B-BD43-9B9C-EF05525C5C75</existingIndex>
+<indexSegment>B0612FE1-CA54-5414-B685-6A7228505A0F</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

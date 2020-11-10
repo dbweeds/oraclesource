@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="540C92A3-F16B-390C-EB87-5899339CC488">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 00:39:36 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

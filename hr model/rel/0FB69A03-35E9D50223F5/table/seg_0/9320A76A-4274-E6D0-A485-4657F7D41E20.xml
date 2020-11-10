@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9320A76A-4274-E6D0-A485-4657F7D41E20" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="REGIONS">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REGIONS</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGION_ID" id="A5791B23-A6C7-B6B1-35E2-9D2BA775F26D">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>REGION_ID_NN</notNullConstraintName>
+</Column>
+<Column name="REGION_NAME" id="479FB8AE-68D0-6960-FA54-38005B92BF48">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_NAME</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DB287C00-4ABD-E9E6-FE28-F14935D2B086" name="REG_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5791B23-A6C7-B6B1-35E2-9D2BA775F26D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BCC147D-736B-BD43-9B9C-EF05525C5C75" schemaObject="4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3" name="REG_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5791B23-A6C7-B6B1-35E2-9D2BA775F26D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

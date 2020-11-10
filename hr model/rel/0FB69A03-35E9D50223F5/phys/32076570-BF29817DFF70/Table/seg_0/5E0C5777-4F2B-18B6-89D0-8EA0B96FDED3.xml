@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="EMPLOYEES" directorySegmentName="seg_0" id="5E0C5777-4F2B-18B6-89D0-8EA0B96FDED3">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>19355536-496C-62BD-70D6-F6371C8BC423</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FIRST_NAME" id="02681147-8540-CD2F-97AB-B45A1D3796D8">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAST_NAME" id="28BB5C63-0247-7362-C3C3-84AD86DFA957">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="JOB_ID" id="31C1C00B-A5DC-1FC4-6A1D-5073A25A89C3">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALARY" id="4F631F8C-15DE-DEF1-F616-4FBF07C2EE55">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE_NUMBER" id="5B23846E-57C0-D110-5218-53700BD137AC">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_ID" id="86CE077D-C27B-DED7-DFD8-4B7E97E11A1E">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MANAGER_ID" id="8C900FEB-56C9-4204-865D-8E5645EED062">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMISSION_PCT" id="A0551E78-2621-9228-3E04-5E27A0AC82D0">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HIRE_DATE" id="A3E898A6-1F64-9FAF-D029-0972B82A32FA">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="A8A634C1-986A-B756-B685-780FCBCEC1BA">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_ID" id="C52975DC-F346-009A-DBBA-FE354C9F41B5">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_EMAIL_UK" id="2AF5FB2A-BEF0-E4DB-7A4F-BA7A0F438522">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_JOB_IX" id="45409C47-DAF3-710B-EA4F-DDDC7711115F">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_NAME_IX" id="57A14983-F0A2-12A5-B21D-FF8BAB772054">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_DEPARTMENT_IX" id="94004AFD-733C-9E2C-9ABF-4D3674AE4A14">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_EMP_ID_PK" id="B7086C85-F512-AFC5-DCD3-98820BFC3AD8">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMP_MANAGER_IX" id="C21C558A-5E1E-157A-60B3-421D846D516D">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<schemaObject>4DDDFA1B-205E-BFBD-41F9-6470A3D8A3E3</schemaObject>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EMP_MANAGER_FK" id="26BCEE3C-F7B9-9DD6-A072-DCBCA9CD86FD">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EMP_DEPT_FK" id="B6811495-EDDE-3804-97D5-7417E6007860">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EMP_JOB_FK" id="EBC24030-2D91-DAF6-6DE5-34337616D056">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EMP_EMP_ID_PK" id="E9DDFCB5-5147-DEF1-2AD8-82B525C348E7">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+<existingIndex>B7086C85-F512-AFC5-DCD3-98820BFC3AD8</existingIndex>
+<indexSegment>B0612FE1-CA54-5414-B685-6A7228505A0F</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="EMP_EMAIL_UK" id="2600063C-7609-9A8C-10A0-47BE35910DD5">
+<createdBy>soldesk</createdBy>
+<createdTime>2020-11-09 01:30:57 UTC</createdTime>
+<ownerDesignName>hr model</ownerDesignName>
+<logging>NO</logging>
+<segment>B0612FE1-CA54-5414-B685-6A7228505A0F</segment>
+<tableSpace>7B4E80BE-C01D-1ABD-45FA-2D843BB77680</tableSpace>
+<existingIndex>2AF5FB2A-BEF0-E4DB-7A4F-BA7A0F438522</existingIndex>
+<indexSegment>B0612FE1-CA54-5414-B685-6A7228505A0F</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>
