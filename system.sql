@@ -50,5 +50,12 @@ drop user test2 cascade;
 create user javadb identified by 12345;
 grant connect,resource to javadb;
 
+<<<<<<< HEAD
 create user EmployeeDB identified by 12345;
 grant connect,resource to EmployeeDB;
+=======
+
+
+create user employeedb identified by 12345;
+grant connect,resource to employeedb;
+>>>>>>> 82c66c2145d27d468a76f8d81b04cc20be240e5e
