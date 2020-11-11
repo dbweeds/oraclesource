@@ -1,10 +1,11 @@
 drop table userTBL;
 create table userTBL(
-    bo number(8) constraint pk_userTBL primary key,
+    no number(8) constraint pk_userTBL primary key,
     userName nchar(4) not null,
     birthYear number(4) not null,
     addr nchar(2) not null,
     mobile nvarchar2(13));
+
 
 create sequence userTBL_seq;
 drop sequence userTBL_seq;

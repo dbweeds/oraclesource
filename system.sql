@@ -49,3 +49,8 @@ drop user test2 cascade;
 --수업에서 사용할 사용자 생성
 create user javadb identified by 12345;
 grant connect,resource to javadb;
+
+
+
+create user employeedb identified by 12345;
+grant connect,resource to employeedb;
