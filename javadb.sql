@@ -6,7 +6,7 @@ create table userTBL(
     addr nchar(2) not null,
     mobile nvarchar2(13));
 
-
+alter table userTBL rename COLUMN bo to no;
 create sequence userTBL_seq;
 drop sequence userTBL_seq;
 
