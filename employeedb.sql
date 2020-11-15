@@ -1,17 +1,25 @@
-
-
 create table employee(
-    no number(8) constraint pk_employee primary key,
-    name nvarchar2(5),
-    sex nvarchar2(3),
-    birthday date,
-    address nvarchar2(40),
-    email nvarchar2(30),
-    pay number(6),
-    pos nvarchar2(3),
-    passward nvarchar2(20));
+    no number constraint pk_employee PRIMARY key,
+    name NVARCHAR2(5) not null,
+    sex NVARCHAR2(3) not null,
+    telno NVARCHAR2(15) ,
+    birthday date not null,
+    address NVARCHAR2(50) ,
+    email NVARCHAR2(30) ,
+    pay number(5) ,
+    position NVARCHAR2(3),
+    id varchar2(15) not null,
+    passward VARCHAR2(15) not null
+);
+create table employeemanager(
+    id nvarchar2(15) constraint pk_employeemanager PRIMARY key,
+    name NVARCHAR2(5) not null,
+    telno NVARCHAR2(15) ,
+    email NVARCHAR2(30) ,
+    passward VARCHAR2(15) not null
+);
+create SEQUENCE employee_seq;
 
-create sequence employee_seq;
 select * from employee;
 
 commit;
