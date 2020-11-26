@@ -14,8 +14,6 @@ create table employee(
 create table employeemanager(
     id nvarchar2(15) constraint pk_employeemanager PRIMARY key,
     name NVARCHAR2(5) not null,
-    telno NVARCHAR2(15) ,
-    email NVARCHAR2(30) ,
     passward VARCHAR2(15) not null
 );
 create SEQUENCE employee_seq;
